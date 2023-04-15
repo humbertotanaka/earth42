@@ -3,5 +3,6 @@
 
 export default {
   failed: 'Action failed',
+  Language: 'Language',
   success: 'Action was successful'
 }

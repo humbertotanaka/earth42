@@ -26,5 +26,13 @@ export default route(function (/* { store, ssrContext } */) {
     history: createHistory(process.env.VUE_ROUTER_BASE)
   })
 
+  Router.beforeEach((to, _from, next) => {
+    if (to.path === '/') {
+      next({ path: '/me' })
+    } else {
+      next()
+    }
+  })
+
   return Router
 })
