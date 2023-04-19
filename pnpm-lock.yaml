@@ -54,6 +54,9 @@ devDependencies:
   prettier:
     specifier: ^2.8.7
     version: 2.8.7
+  push-dir:
+    specifier: ^0.4.1
+    version: 0.4.1
   workbox-build:
     specifier: ^6.5.0
     version: 6.5.4
@@ -4189,6 +4192,14 @@ packages:
   /punycode@2.3.0:
     resolution: {integrity: sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==}
     engines: {node: '>=6'}
+    dev: true
+
+  /push-dir@0.4.1:
+    resolution: {integrity: sha512-Nrrsly0c3kCfu725Jnif/s5adHpBwKCGWBttHVxTndF4iyGBSFtNi/pduFxHF5ks0kWtHcbA3XXP5MEra6iiCA==}
+    engines: {node: '>=0.12'}
+    hasBin: true
+    dependencies:
+      minimist: 1.2.8
     dev: true
 
   /qs@6.11.0:
