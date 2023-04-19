@@ -23,7 +23,7 @@
     v-else
     :prepend-icon="item.meta.icon"
     :title="$t(item.meta.title)"
-    :to="item.path"
+    :to="item.meta.path"
     :value="item.meta.path"
   />
 </template>

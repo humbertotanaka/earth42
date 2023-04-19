@@ -1,1 +1,10 @@
 // app global css in SCSS form
+@font-face {
+  font-family: nunito;
+  src: url('@/css/fonts/NunitoSans-Regular.ttf');
+}
+
+// declare a class which applies it
+.font-nunito {
+  font-family: 'nunito';
+}

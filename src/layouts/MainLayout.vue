@@ -1,5 +1,5 @@
 <template>
-  <q-layout class="main" view="hHh lpR fFf">
+  <q-layout class="main" view="hHh LpR fFf">
     <TheDrawer />
     <TheHeader />
     <TheRightDrawer />
@@ -29,6 +29,7 @@ export default defineComponent({
 
 <style scoped>
 .main::before {
+  background-attachment: fixed;
   background-image: url('@/assets/bg.png');
   background-position: bottom;
   background-repeat: no-repeat;

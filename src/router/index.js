@@ -27,8 +27,8 @@ export default route(function (/* { store, ssrContext } */) {
   })
 
   Router.beforeEach((to, _from, next) => {
-    if (to.path === '/') {
-      next({ path: '/me' })
+    if (to.path === '/me') {
+      next({ path: '/' })
     } else {
       next()
     }

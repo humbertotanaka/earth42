@@ -1,5 +1,5 @@
 <template>
-  <div class="header-title row items-center text-primary">
+  <div class="header-title row items-center text-deep-purple">
     <q-icon
       :name="model.icon"
       class="q-mb-xs q-mr-sm"

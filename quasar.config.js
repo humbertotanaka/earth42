@@ -65,6 +65,7 @@ module.exports = configure(function (/* ctx */) {
           ...cfg.resolve.alias,
           '@': path.resolve(__dirname, './src')
         }
+        cfg.server.sourcemapIgnoreList = false
       },
 
       target: {
