@@ -6,7 +6,7 @@
           :label="Defs.MY_NAME"
           class="text-weight-bolder"
           flat
-          to="#"
+          to="/"
         />
         <q-space />
         <q-btn
@@ -18,6 +18,11 @@
           :label="$t('Experience')"
           flat
           to="#experience"
+        />
+        <q-btn
+          :label="$t('Contacts')"
+          flat
+          to="#contact"
         />
       </q-toolbar>
     </nav>
@@ -32,7 +37,7 @@
             horizontal
           >
             <q-card-section class="row fit items-center">
-              <q-card-section class="content-title text-h2 text-grey-9 text-weight-bold">
+              <q-card-section class="content-title text-h2 text-weight-bold">
                 <p>{{ $t('Hey, I\'m {0}, a full-stack dev', [ Defs.MY_NAME ]) }}</p>
                 <q-btn
                   :aria-label="$t('Email me')"
@@ -109,24 +114,28 @@
               </q-card-section>
             </q-card-section>
 
-            <q-img
-              class="summary-image col-5"
-              src="@/assets/me.png"
-            />
+            <q-card-section class="col-5 q-pa-xl">
+              <q-img
+                alt="Avatar"
+                class="summary-image"
+                fit="contain"
+                src="@/assets/me.png"
+              />
+          </q-card-section>
           </q-card-section>
         </q-card>
       </div>
     </section>
     <section
-      class="content font-nunito q-mx-auto q-mt-xl"
+      class="content font-nunito q-mx-auto q-mt-xl q-pt-xl"
       id="me"
     >
       <q-card
-        class="bg-transparent"
+        class="bg-transparent q-pt-xl"
         flat
       >
         <q-card-section
-          class="row"
+          class="row q-pt-xl"
           horizontal
         >
           <q-card-section class="col-9">
@@ -156,15 +165,15 @@
       </q-card>
     </section>
     <section
-      class="content font-nunito q-mx-auto q-mt-xl"
+      class="content font-nunito q-mx-auto q-mt-xl q-pt-xl"
       id="experience"
     >
       <q-card
-        class="bg-transparent"
+        class="bg-transparent q-pt-xl"
         flat
       >
         <q-card-section
-          class="row"
+          class="row q-pt-xl"
           horizontal
         >
           <q-card-section class="col-3">
@@ -363,7 +372,7 @@
         </q-card-section>
       </q-card>
     </section>
-    <section class="content-footer bg-purple-9">
+    <section class="content-footer bg-deep-purple-6">
       <div
         class="content font-nunito q-mx-auto q-mt-xl"
         id="contact"

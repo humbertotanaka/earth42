@@ -27,17 +27,7 @@
       />
 
       <q-btn
-        v-if="isMobile && showDrawerButton"
-        :aria-label="$t('Right navigation drawer')"
-        :class="textColor"
-        dense
-        flat
-        icon="more_vert"
-        round
-        @click="toggleRightNavigationDrawer"
-      />
-
-      <q-btn
+        v-if="!isMobile"
         :class="textColor"
         :href="Links.GITHUB"
         aria-label="Github"
@@ -50,6 +40,7 @@
         <q-tooltip>{{ $t('Github') }}</q-tooltip>
       </q-btn>
       <q-btn
+        v-if="!isMobile"
         :class="textColor"
         aria-label="LinkedIn"
         flat
@@ -59,6 +50,17 @@
       >
         <q-tooltip>{{ $t('LinkedIn') }}</q-tooltip>
       </q-btn>
+
+      <q-btn
+        v-if="isMobile && showDrawerButton"
+        :aria-label="$t('Right navigation drawer')"
+        :class="textColor"
+        dense
+        flat
+        icon="more_vert"
+        round
+        @click="toggleRightNavigationDrawer"
+      />
     </q-toolbar>
   </q-header>
 </template>
