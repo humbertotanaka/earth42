@@ -8,12 +8,17 @@
   >
     <TheLanguageCombobox class="q-mt-md q-px-sm" />
     <TheThemeButton />
+    <q-space />
+    <TheButtonGithub />
+    <TheButtonLinkedIn />
   </q-drawer>
 </template>
 
 <script>
 import { storeToRefs } from 'pinia'
 
+import TheButtonGithub from '@/components/base/TheButtonGithub.vue'
+import TheButtonLinkedIn from '@/components/base/TheButtonLinkedIn.vue'
 import TheLanguageCombobox from '@/components/base/TheLanguageCombobox.vue'
 import TheThemeButton from '@/components/base/TheThemeButton.vue'
 
@@ -21,6 +26,8 @@ import { useStore } from '@/stores/system'
 
 export default {
   components: {
+    TheButtonGithub,
+    TheButtonLinkedIn,
     TheLanguageCombobox,
     TheThemeButton
   },

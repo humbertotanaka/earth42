@@ -28,7 +28,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.main::before {
+.main-deprecated::before {
   background-attachment: fixed;
   background-image: url('@/assets/bg.png');
   background-position: bottom;

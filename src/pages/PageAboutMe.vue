@@ -39,78 +39,50 @@
             <q-card-section class="row fit items-center">
               <q-card-section class="content-title text-h2 text-weight-bold">
                 <p>{{ $t('Hey, I\'m {0}, a full-stack dev', [ Defs.MY_NAME ]) }}</p>
-                <q-btn
-                  :aria-label="$t('Email me')"
-                  :label="$t('Email me')"
+                <ComponentButton
+                  :flat="false"
                   :href="`mailto:${Defs.MY_EMAIL}`"
+                  :label="$t('Email me')"
                   color="deep-purple"
                   no-caps
                 />
               </q-card-section>
               <q-card-section class="absolute-bottom q-mb-xl">
-                <q-btn
-                  aria-label="HTML5"
+                <ComponentButtonIcon
                   color="deep-orange"
-                  flat
                   icon="fa-brands fa-html5"
-                  round
-                >
-                  <q-tooltip>{{ $t('HTML5') }}</q-tooltip>
-                </q-btn>
-                <q-btn
-                  aria-label="CSS3"
+                  label="HTML5"
+                />
+                <ComponentButtonIcon
                   color="blue"
-                  flat
+                  label="CSS3"
                   icon="fa-brands fa-css3-alt"
-                  round
-                >
-                  <q-tooltip>{{ $t('CSS3') }}</q-tooltip>
-                </q-btn>
-                <q-btn
-                  aria-label="VueJS"
+                />
+                <ComponentButtonIcon
                   color="teal"
-                  flat
                   icon="fa-brands fa-vuejs"
-                  round
-                >
-                  <q-tooltip>{{ $t('VueJS') }}</q-tooltip>
-                </q-btn>
-                <q-btn
-                  aria-label="NodeJS"
+                  label="VueJS"
+                />
+                <ComponentButtonIcon
                   color="amber"
-                  flat
                   icon="fa-brands fa-node-js"
-                  round
-                >
-                  <q-tooltip>{{ $t('NodeJS') }}</q-tooltip>
-                </q-btn>
-                <q-btn
-                  aria-label="Git"
+                  label="NodeJS"
+                />
+                <ComponentButtonIcon
                   color="deep-orange"
-                  flat
                   icon="fa-brands fa-git"
-                  round
-                >
-                  <q-tooltip>{{ $t('Git') }}</q-tooltip>
-                </q-btn>
-                <q-btn
-                  aria-label="Docker"
+                  label="Git"
+                />
+                <ComponentButtonIcon
                   color="blue"
-                  flat
                   icon="fa-brands fa-docker"
-                  round
-                >
-                  <q-tooltip>{{ $t('Docker') }}</q-tooltip>
-                </q-btn>
-                <q-btn
-                  aria-label="AWS"
+                  label="Docker"
+                />
+                <ComponentButtonIcon
                   color="orange"
-                  flat
                   icon="fa-brands fa-aws"
-                  round
-                >
-                  <q-tooltip>{{ $t('AWS') }}</q-tooltip>
-                </q-btn>
+                  label="AWS"
+                />
               </q-card-section>
             </q-card-section>
 
@@ -190,18 +162,14 @@
               >
                 <template #title>
                   <h6 class="q-timeline__title">
-                    <q-btn
-                      :aria-label="Defs.SUMUS"
+                    <ComponentButtonImage
                       :href="Links.SUMUS"
+                      :label="Defs.SUMUS"
                       class="bg-dark q-mr-md"
-                      flat
-                      target="_blank"
-                    >
-                      <q-avatar size="lg">
-                        <q-tooltip>{{ Defs.SUMUS }}</q-tooltip>
-                        <img src="https://sumus.com.br/wp-content/uploads/2020/05/logo-sumus-150px-2.png">
-                      </q-avatar>
-                    </q-btn>
+                      image="https://sumus.com.br/wp-content/uploads/2020/05/logo-sumus-150px-2.png"
+                      no-caps
+                      size="lg"
+                    />
                     {{ $t('Senior Full-Stack Dev') }}
                   </h6>
                 </template>
@@ -216,18 +184,14 @@
               >
                 <template #title>
                   <h6 class="q-timeline__title">
-                    <q-btn
-                      :aria-label="Defs.SUMUS"
+                    <ComponentButtonImage
                       :href="Links.SUMUS"
+                      :label="Defs.SUMUS"
                       class="bg-dark q-mr-md"
-                      flat
-                      target="_blank"
-                    >
-                      <q-avatar size="lg">
-                        <q-tooltip>{{ Defs.SUMUS }}</q-tooltip>
-                        <img src="https://sumus.com.br/wp-content/uploads/2020/05/logo-sumus-150px-2.png">
-                      </q-avatar>
-                    </q-btn>
+                      image="https://sumus.com.br/wp-content/uploads/2020/05/logo-sumus-150px-2.png"
+                      no-caps
+                      size="lg"
+                    />
                     {{ $t('Full-Stack Dev') }}
                   </h6>
                 </template>
@@ -242,18 +206,14 @@
               >
                 <template #title>
                   <h6 class="q-timeline__title">
-                    <q-btn
-                      :aria-label="Defs.SUMUS"
+                    <ComponentButtonImage
                       :href="Links.SUMUS"
+                      :label="Defs.SUMUS"
                       class="bg-dark q-mr-md"
-                      flat
-                      target="_blank"
-                    >
-                      <q-avatar size="lg">
-                        <q-tooltip>{{ Defs.SUMUS }}</q-tooltip>
-                        <img src="https://sumus.com.br/wp-content/uploads/2020/05/logo-sumus-150px-2.png">
-                      </q-avatar>
-                    </q-btn>
+                      image="https://sumus.com.br/wp-content/uploads/2020/05/logo-sumus-150px-2.png"
+                      no-caps
+                      size="lg"
+                    />
                     {{ $t('Trainee') }}
                   </h6>
                 </template>
@@ -265,18 +225,14 @@
               >
                 <template #title>
                   <h6 class="q-timeline__title">
-                    <q-btn
-                      :aria-label="Defs.SUMUS"
+                    <ComponentButtonImage
                       :href="Links.SUMUS"
+                      :label="Defs.SUMUS"
                       class="bg-dark q-mr-md"
-                      flat
-                      target="_blank"
-                    >
-                      <q-avatar size="lg">
-                        <q-tooltip>{{ Defs.SUMUS }}</q-tooltip>
-                        <img src="https://sumus.com.br/wp-content/uploads/2020/05/logo-sumus-150px-2.png">
-                      </q-avatar>
-                    </q-btn>
+                      image="https://sumus.com.br/wp-content/uploads/2020/05/logo-sumus-150px-2.png"
+                      no-caps
+                      size="lg"
+                    />
                     {{ $t('Internship') }}
                   </h6>
                 </template>
@@ -306,16 +262,12 @@
               >
                 <template #title>
                   <h6 class="q-timeline__title">
-                    <q-btn
-                      :aria-label="Defs.MAUA"
+                    <ComponentButton
                       :href="Links.MAUA"
-                      flat
+                      :label="Defs.MAUA"
                       no-caps
                       size="lg"
-                      target="_blank"
-                    >
-                      {{ Defs.MAUA }}
-                    </q-btn>
+                    />
                   </h6>
                 </template>
                 <div>
@@ -339,19 +291,19 @@
               ― {{ $t('Language & Tools') }}
             </q-card-section>
             <q-card-section>
-              <q-chip outline color="deep-purple">{{ $t('HTML5 / CSS3 / SCSS') }}</q-chip>
-              <q-chip outline color="deep-purple">{{ $t('JavaScript / ES6') }}</q-chip>
-              <q-chip outline color="deep-purple">{{ $t('VueJS / Quasar') }}</q-chip>
-              <q-chip outline color="deep-purple">{{ $t('NodeJS / ExpressJS') }}</q-chip>
-              <q-chip outline color="deep-purple">{{ $t('Git / AWS CodeCommit') }}</q-chip>
-              <q-chip outline color="deep-purple">{{ $t('Docker / AWS ECR / AWS ECS') }}</q-chip>
-              <q-chip outline color="deep-purple">{{ $t('Webpack / Vite') }}</q-chip>
-              <q-chip outline color="deep-purple">{{ $t('NPM / Yarn / PNPM') }}</q-chip>
-              <q-chip outline color="deep-purple">{{ $t('Agile / Jira') }}</q-chip>
-              <q-chip outline color="deep-purple">{{ $t('AWS S3') }}</q-chip>
-              <q-chip outline color="deep-purple">{{ $t('AWS CloudWatch') }}</q-chip>
-              <q-chip outline color="deep-purple">{{ $t('AWS SAM / AWS Lambda / AWS Batch') }}</q-chip>
-              <q-chip outline color="deep-purple">{{ $t('AWS RDS / AWS DynamoDB / AWS ElastiCache / PostgreSQL / SQL Server') }}</q-chip>
+              <ComponentChip label="HTML5 / CSS3 / SCSS" />
+              <ComponentChip label="JavaScript / ES6" />
+              <ComponentChip label="VueJS / Quasar" />
+              <ComponentChip label="NodeJS / ExpressJS" />
+              <ComponentChip label="Git / AWS CodeCommit" />
+              <ComponentChip label="Docker / AWS ECR / AWS ECS" />
+              <ComponentChip label="Webpack / Vite" />
+              <ComponentChip label="NPM / Yarn / PNPM" />
+              <ComponentChip label="Agile / Jira" />
+              <ComponentChip label="AWS S3" />
+              <ComponentChip label="AWS CloudWatch" />
+              <ComponentChip label="AWS SAM / AWS Lambda / AWS Batch" />
+              <ComponentChip label="AWS RDS / AWS DynamoDB / AWS ElastiCache / PostgreSQL / SQL Server" />
             </q-card-section>
           </q-card-section>
           <q-card-section class="col-3">
@@ -359,14 +311,14 @@
               ― {{ $t('Key Strengths') }}
             </q-card-section>
             <q-card-section>
-              <q-chip outline color="deep-purple">{{ $t('Communication') }}</q-chip>
-              <q-chip outline color="deep-purple">{{ $t('Critical Thinking') }}</q-chip>
-              <q-chip outline color="deep-purple">{{ $t('Organization') }}</q-chip>
-              <q-chip outline color="deep-purple">{{ $t('Adaptability') }}</q-chip>
-              <q-chip outline color="deep-purple">{{ $t('Problem Solving') }}</q-chip>
-              <q-chip outline color="deep-purple">{{ $t('Teamwork') }}</q-chip>
-              <q-chip outline color="deep-purple">{{ $t('Focus') }}</q-chip>
-              <q-chip outline color="deep-purple">{{ $t('Self-taught') }}</q-chip>
+              <ComponentChip label="Communication" />
+              <ComponentChip label="Critical Thinking" />
+              <ComponentChip label="Organization" />
+              <ComponentChip label="Adaptability" />
+              <ComponentChip label="Problem Solving" />
+              <ComponentChip label="Teamwork" />
+              <ComponentChip label="Focus" />
+              <ComponentChip label="Self-taught" />
             </q-card-section>
           </q-card-section>
         </q-card-section>
@@ -393,29 +345,17 @@
                 ― {{ $t('Socials') }}
               </q-card-section>
               <div>
-                <q-btn
+                <ComponentButtonIcon
                   :href="Links.GITHUB"
-                  aria-label="Github"
                   color="white"
-                  flat
                   icon="fa-brands fa-github"
-                  round
-                  size="md"
-                  target="_blank"
-                >
-                  <q-tooltip>{{ $t('Github') }}</q-tooltip>
-                </q-btn>
-                <q-btn
-                  aria-label="LinkedIn"
+                  label="Github"
+                />
+                <ComponentButtonIcon
                   color="white"
-                  flat
                   icon="fa-brands fa-linkedin"
-                  round
-                  size="md"
-                  target="_blank"
-                >
-                  <q-tooltip>{{ $t('LinkedIn') }}</q-tooltip>
-                </q-btn>
+                  label="LinkedIn"
+                />
               </div>
             </q-card-section>
             <q-card-section class="column col-3 items-center">
@@ -423,17 +363,12 @@
                 ― {{ $t('Contacts') }}
               </q-card-section>
               <div>
-                <q-btn
+                <ComponentButtonIcon
                   :href="`mailto:${Defs.MY_EMAIL}`"
-                  aria-label="Email"
                   color="white"
-                  flat
                   icon="fa-regular fa-envelope"
-                  round
-                  size="md"
-                >
-                  <q-tooltip>{{ $t('Email') }}</q-tooltip>
-                </q-btn>
+                  label="Email"
+                />
               </div>
             </q-card-section>
           </q-card-section>
@@ -446,10 +381,21 @@
 <script>
 import { defineComponent } from 'vue'
 
+import ComponentButton from '@/components/base/ComponentButton.vue'
+import ComponentButtonIcon from '@/components/base/ComponentButtonIcon.vue'
+import ComponentButtonImage from '@/components/base/ComponentButtonImage.vue'
+import ComponentChip from '@/components/base/ComponentChip.vue'
+
 import { Defs, Links } from '@/util/definitions'
 
 export default defineComponent({
   name: 'PageAboutMe',
+  components: {
+    ComponentButton,
+    ComponentButtonIcon,
+    ComponentButtonImage,
+    ComponentChip
+  },
   setup () {
     return {
       Defs,
@@ -474,10 +420,10 @@ export default defineComponent({
 }
 
 .content-summary {
-  background-color: #f2f5f768;
+  background-color: #f2f5f788;
 }
 .body--dark .content-summary {
-  background-color: #1d1f2068;
+  background-color: #1d1f2088;
 }
 
 .summary {

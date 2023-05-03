@@ -22,7 +22,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.main::before {
+.main-deprecated::before {
   background-image: url('@/assets/bg.png');
   background-position: bottom;
   background-repeat: no-repeat;

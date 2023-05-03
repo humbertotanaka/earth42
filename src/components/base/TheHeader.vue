@@ -4,15 +4,13 @@
     elevated
     reveal
   >
-    <q-toolbar class="header-toolbar q-gutter-x-md">
-      <q-btn
+    <q-toolbar class="header-toolbar q-gutter-x-sm">
+      <ComponentButtonIcon
         v-if="showDrawerButton"
-        :aria-label="$t('Navigation drawer')"
         :class="textColor"
+        :label="$t('Navigation drawer')"
         dense
-        flat
         icon="fa-solid fa-bars"
-        round
         @click="toggleNavigationDrawer"
       />
 
@@ -24,41 +22,25 @@
       />
       <TheThemeButton
         v-if="!isMobile"
+        class="q-mr-xl"
       />
 
-      <q-btn
+      <TheButtonGithub
         v-if="!isMobile"
         :class="textColor"
-        :href="Links.GITHUB"
-        aria-label="Github"
         class="q-ml-xl"
-        flat
-        icon="fa-brands fa-github"
-        round
-        target="_blank"
-      >
-        <q-tooltip>{{ $t('Github') }}</q-tooltip>
-      </q-btn>
-      <q-btn
+      />
+      <TheButtonLinkedIn
         v-if="!isMobile"
         :class="textColor"
-        aria-label="LinkedIn"
-        flat
-        icon="fa-brands fa-linkedin"
-        round
-        target="_blank"
-      >
-        <q-tooltip>{{ $t('LinkedIn') }}</q-tooltip>
-      </q-btn>
+      />
 
-      <q-btn
+      <ComponentButtonIcon
         v-if="isMobile && showDrawerButton"
-        :aria-label="$t('Right navigation drawer')"
         :class="textColor"
+        :label="$t('Right navigation drawer')"
         dense
-        flat
         icon="more_vert"
-        round
         @click="toggleRightNavigationDrawer"
       />
     </q-toolbar>
@@ -70,6 +52,9 @@
 import { useQuasar } from 'quasar'
 import { computed } from 'vue'
 
+import ComponentButtonIcon from '@/components/base/ComponentButtonIcon.vue'
+import TheButtonGithub from '@/components/base/TheButtonGithub.vue'
+import TheButtonLinkedIn from '@/components/base/TheButtonLinkedIn.vue'
 import TheHeaderTitle from '@/components/base/TheHeaderTitle.vue'
 import TheLanguageCombobox from '@/components/base/TheLanguageCombobox.vue'
 import TheThemeButton from '@/components/base/TheThemeButton.vue'
@@ -80,10 +65,13 @@ import { Links } from '@/util/definitions'
 
 export default {
   components: {
+    ComponentButtonIcon,
+    TheButtonGithub,
+    TheButtonLinkedIn,
     TheHeaderTitle,
     TheLanguageCombobox,
     TheThemeButton
-  },
+},
   props: {
     showDrawerButton: {
       type: Boolean,
