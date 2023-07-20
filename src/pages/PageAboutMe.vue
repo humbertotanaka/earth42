@@ -26,18 +26,16 @@
         />
       </q-toolbar>
     </nav>
-    <section class="content-summary">
+    <section class="content-summary full-width">
       <div class="content q-mx-auto">
         <q-card
-          class="summary bg-transparent items-center row"
+          class="summary bg-transparent justify-center row"
           flat
         >
           <q-card-section
-            class="row fit justify-evenly items-center q-py-xl"
-            horizontal
+            class="row justify-evenly items-center"
           >
-            <q-card-section class="row fit items-center">
-              <q-card-section class="content-title text-h2 text-weight-bold">
+            <q-card-section class="col-7 content-title text-h2 text-weight-bold">
                 <p>{{ $t('Hey, I\'m {0}, a ', [ Defs.MY_NAME ]) }}<span>{{ $t(Defs.MY_ROLE) }}</span></p>
                 <ComponentButton
                   :flat="false"
@@ -46,54 +44,52 @@
                   color="deep-purple"
                   no-caps
                 />
-              </q-card-section>
-              <q-card-section class="absolute-bottom q-mb-xl">
-                <ComponentButtonIcon
-                  color="deep-orange"
-                  icon="fa-brands fa-html5"
-                  label="HTML5"
-                />
-                <ComponentButtonIcon
-                  color="blue"
-                  label="CSS3"
-                  icon="fa-brands fa-css3-alt"
-                />
-                <ComponentButtonIcon
-                  color="teal"
-                  icon="fa-brands fa-vuejs"
-                  label="VueJS"
-                />
-                <ComponentButtonIcon
-                  color="amber"
-                  icon="fa-brands fa-node-js"
-                  label="NodeJS"
-                />
-                <ComponentButtonIcon
-                  color="deep-orange"
-                  icon="fa-brands fa-git"
-                  label="Git"
-                />
-                <ComponentButtonIcon
-                  color="blue"
-                  icon="fa-brands fa-docker"
-                  label="Docker"
-                />
-                <ComponentButtonIcon
-                  color="orange"
-                  icon="fa-brands fa-aws"
-                  label="AWS"
-                />
-              </q-card-section>
             </q-card-section>
-
-            <q-card-section class="col-5 q-pa-xl">
+            <q-card-section class="avatar col-5 q-pa-xl">
               <q-img
                 alt="Avatar"
                 class="summary-image"
                 fit="contain"
                 src="@/assets/me.png"
               />
+            </q-card-section>
           </q-card-section>
+          <q-card-section class="row justify-center skill">
+            <ComponentButtonIcon
+              color="deep-orange"
+              icon="fa-brands fa-html5"
+              label="HTML5"
+            />
+            <ComponentButtonIcon
+              color="blue"
+              label="CSS3"
+              icon="fa-brands fa-css3-alt"
+            />
+            <ComponentButtonIcon
+              color="teal"
+              icon="fa-brands fa-vuejs"
+              label="VueJS"
+            />
+            <ComponentButtonIcon
+              color="amber"
+              icon="fa-brands fa-node-js"
+              label="NodeJS"
+            />
+            <ComponentButtonIcon
+              color="deep-orange"
+              icon="fa-brands fa-git"
+              label="Git"
+            />
+            <ComponentButtonIcon
+              color="blue"
+              icon="fa-brands fa-docker"
+              label="Docker"
+            />
+            <ComponentButtonIcon
+              color="orange"
+              icon="fa-brands fa-aws"
+              label="AWS"
+            />
           </q-card-section>
         </q-card>
       </div>
@@ -108,9 +104,8 @@
       >
         <q-card-section
           class="row q-pt-xl"
-          horizontal
         >
-          <q-card-section class="col-9">
+          <q-card-section class="col-9 section">
             <q-card-section class="text-subtitle1 text-weight-bold text-deep-purple-4 text-uppercase">
               ― {{ $t('My Background') }}
             </q-card-section>
@@ -118,7 +113,7 @@
               {{ $t(Defs.MY_BACKGROUND) }}
             </q-card-section>
           </q-card-section>
-          <q-card-section class="col-3">
+          <q-card-section class="col-3 section">
             <q-card-section class="text-subtitle1 text-weight-bold text-deep-purple-4 text-uppercase">
               ― {{ $t('Location') }}
             </q-card-section>
@@ -146,14 +141,13 @@
       >
         <q-card-section
           class="row q-pt-xl"
-          horizontal
         >
-          <q-card-section class="col-3">
+          <q-card-section class="col-3 section">
             <q-card-section class="text-subtitle1 text-weight-bold text-deep-purple-4 text-uppercase">
               ― {{ $t('Work Experience') }}
             </q-card-section>
           </q-card-section>
-          <q-card-section>
+          <q-card-section class="col-9 section">
             <q-timeline color="secondary">
               <q-timeline-entry
                 :subtitle="`2019 - ${$t('current')}`"
@@ -247,14 +241,13 @@
       >
         <q-card-section
           class="row"
-          horizontal
         >
-          <q-card-section class="col-3">
+          <q-card-section class="col-3 section">
             <q-card-section class="text-subtitle1 text-weight-bold text-deep-purple-4 text-uppercase">
               ― {{ $t('Education') }}
             </q-card-section>
           </q-card-section>
-          <q-card-section>
+          <q-card-section class="col-9 section">
             <q-timeline color="secondary">
               <q-timeline-entry
                 icon="fa-solid fa-graduation-cap"
@@ -284,9 +277,8 @@
       >
         <q-card-section
           class="row"
-          horizontal
         >
-          <q-card-section class="col-9">
+          <q-card-section class="col-9 section">
             <q-card-section class="text-subtitle1 text-weight-bold text-deep-purple-4 text-uppercase">
               ― {{ $t('Language & Tools') }}
             </q-card-section>
@@ -309,7 +301,7 @@
               <ComponentChip label="AWS SSM / AWS Secrets Manager" />
             </q-card-section>
           </q-card-section>
-          <q-card-section class="col-3">
+          <q-card-section class="col-3 section">
             <q-card-section class="text-subtitle1 text-weight-bold text-deep-purple-4 text-uppercase">
               ― {{ $t('Key Strengths') }}
             </q-card-section>
@@ -338,9 +330,8 @@
         >
           <q-card-section
             class="row"
-            horizontal
           >
-            <q-card-section class="col-6">
+            <q-card-section class="column col-6 fullname">
               <q-card-section class="text-h5 text-white text-weight-bold">{{ Defs.FULLNAME }}</q-card-section>
             </q-card-section>
             <q-card-section class="column col-3 items-center">
@@ -408,8 +399,38 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.content {
-  width: 60%;
+@media (max-width: 1100px) {
+
+  .avatar {
+    padding: 10px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .content .row .section,
+  .content-footer .row .column {
+    width: 100%;
+  }
+
+  .content-footer .fullname {
+    text-align: center;
+  }
+
+  .summary .skill {
+    align-self: baseline;
+    width: 100%;
+  }
+
+}
+
+@media (min-width: 1100px) {
+
+  .content {
+    width: 60%;
+  }
+
 }
 
 .content-text {

@@ -1,9 +1,11 @@
 <template>
   <q-chip
+    :label="label"
+    class="truncate-chip-labels"
     color="deep-purple"
     outline
   >
-    {{ $t(label) }}
+    <q-tooltip>{{ $t(label) }}</q-tooltip>
   </q-chip>
 </template>
 

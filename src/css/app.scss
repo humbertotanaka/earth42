@@ -4,6 +4,16 @@
   src: url('@/css/fonts/NunitoSans-Regular.ttf');
 }
 
+@media (max-width: 1100px) {
+  .q-btn {
+    font-size: 10px;
+  }
+
+  .text-h2 {
+    font-size: 2em !important;
+  }
+}
+
 // declare a class which applies it
 .font-nunito {
   font-family: 'nunito';

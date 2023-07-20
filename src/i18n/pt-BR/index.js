@@ -5,6 +5,7 @@ export default {
   'About me': 'Sobre mim',
   'About this': 'Sobre este projeto',
   'Bachelor\'s degree, Control and Automation Engineering': 'Bacharelado em Engenharia de Controle e Automação',
+  Contacts: 'Contato',
   current: 'atual',
   Education: 'Educação',
   'Email me': 'Me envie um email',

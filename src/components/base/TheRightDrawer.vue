@@ -1,7 +1,7 @@
 <template>
   <q-drawer
     v-model="showRightMenu"
-    :width="150"
+    :width="200"
     class="column items-center q-pt-xl q-gutter-y-lg"
     mini
     side="right"
