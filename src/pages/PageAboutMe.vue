@@ -38,7 +38,7 @@
           >
             <q-card-section class="row fit items-center">
               <q-card-section class="content-title text-h2 text-weight-bold">
-                <p>{{ $t('Hey, I\'m {0}, a full-stack dev', [ Defs.MY_NAME ]) }}</p>
+                <p>{{ $t('Hey, I\'m {0}, a ', [ Defs.MY_NAME ]) }}<span>{{ $t(Defs.MY_ROLE) }}</span></p>
                 <ComponentButton
                   :flat="false"
                   :href="`mailto:${Defs.MY_EMAIL}`"
@@ -301,9 +301,12 @@
               <ComponentChip label="NPM / Yarn / PNPM" />
               <ComponentChip label="Agile / Jira" />
               <ComponentChip label="AWS S3" />
-              <ComponentChip label="AWS CloudWatch" />
-              <ComponentChip label="AWS SAM / AWS Lambda / AWS Batch" />
-              <ComponentChip label="AWS RDS / AWS DynamoDB / AWS ElastiCache / PostgreSQL / SQL Server" />
+              <ComponentChip label="AWS CloudWatch / AWS Eventbridge" />
+              <ComponentChip label="AWS SAM / AWS Cloudformation / AWS Lambda / AWS Batch / AWS SFN / AWS API Gateway" />
+              <ComponentChip label="AWS RDS / AWS DynamoDB / AWS ElastiCache / PostgreSQL / SQL Server / AWS DMS" />
+              <ComponentChip label="AWS SQS" />
+              <ComponentChip label="OAuth / JWT" />
+              <ComponentChip label="AWS SSM / AWS Secrets Manager" />
             </q-card-section>
           </q-card-section>
           <q-card-section class="col-3">
@@ -345,16 +348,11 @@
                 ― {{ $t('Socials') }}
               </q-card-section>
               <div>
-                <ComponentButtonIcon
-                  :href="Links.GITHUB"
+                <TheButtonGithub
                   color="white"
-                  icon="fa-brands fa-github"
-                  label="Github"
                 />
-                <ComponentButtonIcon
+                <TheButtonLinkedIn
                   color="white"
-                  icon="fa-brands fa-linkedin"
-                  label="LinkedIn"
                 />
               </div>
             </q-card-section>
@@ -385,6 +383,8 @@ import ComponentButton from '@/components/base/ComponentButton.vue'
 import ComponentButtonIcon from '@/components/base/ComponentButtonIcon.vue'
 import ComponentButtonImage from '@/components/base/ComponentButtonImage.vue'
 import ComponentChip from '@/components/base/ComponentChip.vue'
+import TheButtonGithub from '@/components/base/TheButtonGithub.vue'
+import TheButtonLinkedIn from '@/components/base/TheButtonLinkedIn.vue'
 
 import { Defs, Links } from '@/util/definitions'
 
@@ -394,7 +394,9 @@ export default defineComponent({
     ComponentButton,
     ComponentButtonIcon,
     ComponentButtonImage,
-    ComponentChip
+    ComponentChip,
+    TheButtonGithub,
+    TheButtonLinkedIn
   },
   setup () {
     return {
@@ -420,10 +422,10 @@ export default defineComponent({
 }
 
 .content-summary {
-  background-color: #f2f5f788;
+  background-color: #f2f5f7cc;
 }
 .body--dark .content-summary {
-  background-color: #1d1f2088;
+  background-color: #1d1f20cc;
 }
 
 .summary {

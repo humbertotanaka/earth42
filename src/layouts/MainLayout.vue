@@ -10,11 +10,14 @@
 </template>
 
 <script>
+import { useQuasar } from 'quasar'
 import { defineComponent } from 'vue'
 
 import TheDrawer from '@/components/base/TheDrawer.vue'
 import TheHeader from '@/components/base/TheHeader.vue'
 import TheRightDrawer from '@/components/base/TheRightDrawer.vue'
+
+import { useStore } from '@/stores/system'
 
 export default defineComponent({
   name: 'MainLayout',
@@ -23,21 +26,16 @@ export default defineComponent({
     TheHeader,
     TheDrawer,
     TheRightDrawer
+  },
+
+  setup () {
+    const $q = useQuasar()
+    const store = useStore()
+
+    $q.dark.set(store.darkTheme)
   }
 })
 </script>
 
 <style scoped>
-.main-deprecated::before {
-  background-attachment: fixed;
-  background-image: url('@/assets/bg.png');
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  content: " ";
-  height: 100%;
-  opacity: 0.1;
-  position: absolute;
-  width: 100%;
-}
 </style>
